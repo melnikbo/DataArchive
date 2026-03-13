@@ -46,7 +46,7 @@ page 633 "Data Archive - New Archive"
                 trigger OnAction()
                 begin
                     if ArchiveName = '' then
-                        ArchiveName := 'Test';
+                        ArchiveName := DefaultArchiveNameLbl;
                     DataArchive.Create(ArchiveName);
                     DataArchive.StartSubscriptionToDelete(false);
                     IsStarted := true;
@@ -84,4 +84,5 @@ page 633 "Data Archive - New Archive"
         DataArchive: Codeunit "Data Archive";
         ArchiveName: Text[80];
         IsStarted: Boolean;
+        DefaultArchiveNameLbl: Label 'Test', Locked = true;
 }

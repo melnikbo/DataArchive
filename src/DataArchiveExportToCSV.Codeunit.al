@@ -98,6 +98,9 @@ codeunit 609 "Data Archive Export to CSV"
             Message(NotAllTablesExportedMsg);
     end;
 
+    /// <summary>
+    /// Writes archived table data to a CSV stream. Uses comma or semicolon as separator based on locale. Text and Code fields are quoted.
+    /// </summary>
     procedure WriteToCsvStream(var DataArchiveTable: Record "Data Archive Table"; var CsvOutStr: Outstream)
     var
         TempBlob: Codeunit "Temp Blob";

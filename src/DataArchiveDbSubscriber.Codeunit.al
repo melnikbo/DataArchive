@@ -31,6 +31,9 @@ codeunit 603 "Data Archive Db Subscriber"
             OnDatabaseDelete := true;
     end;
 
+    /// <summary>
+    /// Captures deleted records into the active data archive. Skips temporary tables to avoid archiving transient data.
+    /// </summary>
     [EventSubscriber(ObjectType::Codeunit, Codeunit::"Global Triggers", 'OnDatabaseDelete', '', false, false)]
     local procedure SaveRecordOnDatabaseDelete(RecRef: RecordRef)
     begin

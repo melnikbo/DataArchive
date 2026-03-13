@@ -66,7 +66,7 @@ table 600 "Data Archive"
     var
         DataArchiveTable: Record "Data Archive Table";
     begin
-        DataArchiveTable.Setrange("Data Archive Entry No.", Rec."Entry No.");
+        DataArchiveTable.SetRange("Data Archive Entry No.", Rec."Entry No.");
         DataArchiveTable.DeleteAll();
     end;
 }

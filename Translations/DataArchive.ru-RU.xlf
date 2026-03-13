@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="ru-RU" original="Data Archive">
+    <body>
+      <group id="body">
+        <trans-unit id="Table 600 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Data Archive</source>
+          <target>Архив данных</target>
+          <note from="Xliff Generator" annotates="general" priority="3">Table - Data Archive</note>
+        </trans-unit>
+        <trans-unit id="Table 600 - Property 2879900210 - Field 1" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Entry No.</source>
+          <target>Номер записи</target>
+          <note from="Xliff Generator" annotates="general" priority="3">Table - Data Archive - Field Entry No.</note>
+        </trans-unit>
+        <trans-unit id="Table 600 - Property 2879900210 - Field 6" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <target>Описание</target>
+          <note from="Xliff Generator" annotates="general" priority="3">Table - Data Archive - Field Description</note>
+        </trans-unit>
+        <trans-unit id="Page 633 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+          <source>New Data Archive</source>
+          <target>Новый архив данных</target>
+          <note from="Xliff Generator" annotates="general" priority="3">Page - Data Archive - New Archive</note>
+        </trans-unit>
+        <trans-unit id="Page 633 - Action Start" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Start Logging</source>
+          <target>Начать запись</target>
+          <note from="Xliff Generator" annotates="general" priority="3">Page - Data Archive - New Archive</note>
+        </trans-unit>
+        <trans-unit id="Page 633 - Action Stop" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Stop Logging</source>
+          <target>Остановить запись</target>
+          <note from="Xliff Generator" annotates="general" priority="3">Page - Data Archive - New Archive</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 609 - Variable ArchiveEmptyErr" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+          <source>There are no archived records.</source>
+          <target>Нет архивных записей.</target>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Data Archive Export to CSV</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 609 - Variable DownloadLbl" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Download</source>
+          <target>Скачать</target>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit - Data Archive Export to CSV</note>
+        </trans-unit>
+        <trans-unit id="Page 630 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Data Archive List</source>
+          <target>Список архивов данных</target>
+          <note from="Xliff Generator" annotates="general" priority="3">Page - Data Archive List</note>
+        </trans-unit>
+        <trans-unit id="Page 630 - Action SaveAsExcel" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Save as Excel</source>
+          <target>Сохранить в Excel</target>
+          <note from="Xliff Generator" annotates="general" priority="3">Page - Data Archive List</note>
+        </trans-unit>
+        <trans-unit id="Page 630 - Action SaveAsCSV" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Save as CSV</source>
+          <target>Сохранить в CSV</target>
+          <note from="Xliff Generator" annotates="general" priority="3">Page - Data Archive List</note>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

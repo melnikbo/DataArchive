@@ -33,6 +33,7 @@ codeunit 605 "Data Archive Provider" implements "Data Archive Provider"
         CurrentDataArchiveEntryNo: Integer;
         DataArchiveCategoryLbl: Label 'Data Archive', Locked = true;
         DataArchiveTableLbl: Label 'Archived %1 records from table %2.', Locked = true;
+        TestProviderLbl: Label 'Data Archive Provider - test label', Locked = true;
         NotArecordErr: Label 'The function only accepts a record as parameter.';
 
     procedure Create(Description: Text): Integer

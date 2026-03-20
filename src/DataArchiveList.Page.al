@@ -129,6 +129,21 @@ page 630 "Data Archive List"
                     Codeunit.Run(Codeunit::"Data Archive Export to CSV", DataArchiveTable);
                 end;
             }
+            action(TestAction)
+            {
+                ApplicationArea = All;
+                Caption = 'Test Action';
+                ToolTip = 'Test action for development.';
+                Image = TestReport;
+
+                trigger OnAction()
+                begin
+                    Message(TestActionLbl);
+                end;
+            }
         }
     }
+
+    var
+        TestActionLbl: Label 'Data Archive - test action executed successfully.', Locked = true;
 }

@@ -85,4 +85,5 @@ page 633 "Data Archive - New Archive"
         ArchiveName: Text[80];
         IsStarted: Boolean;
         DefaultArchiveNameLbl: Label 'Test', Locked = true;
+        // Test change: default archive name used when user leaves field empty
 }

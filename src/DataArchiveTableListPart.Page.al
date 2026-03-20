@@ -12,7 +12,7 @@ namespace System.DataAdministration;
 page 632 "Data Archive Table ListPart"
 {
     ApplicationArea = All;
-    Caption = 'Data Archive Tables';
+    Caption = 'Archived Tables';
     PageType = ListPart;
     Editable = false;
     SourceTable = "Data Archive Table";

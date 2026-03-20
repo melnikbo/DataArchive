@@ -36,6 +36,9 @@ codeunit 605 "Data Archive Provider" implements "Data Archive Provider"
         TestProviderLbl: Label 'Data Archive Provider - test label', Locked = true;
         NotArecordErr: Label 'The function only accepts a record as parameter.';
 
+    /// <summary>
+    /// Creates a new data archive with the given description and returns its Entry No.
+    /// </summary>
     procedure Create(Description: Text): Integer
     begin
         DataArchive.Init();
@@ -45,6 +48,9 @@ codeunit 605 "Data Archive Provider" implements "Data Archive Provider"
         exit(CurrentDataArchiveEntryNo);
     end;
 
+    /// <summary>
+    /// Opens an existing data archive by Entry No. for appending records.
+    /// </summary>
     procedure Open(ID: Integer)
     begin
         DataArchive.Get(ID);

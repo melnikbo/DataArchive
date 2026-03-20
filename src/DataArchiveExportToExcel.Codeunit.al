@@ -4,7 +4,7 @@
 // ------------------------------------------------------------------------------------------------
 
 /// <summary>
-/// Exports the contents one or more "Data Archive Table" records into an Excel book with one sheet per table.
+/// Exports the contents of one or more "Data Archive Table" records into an Excel workbook with one sheet per table.
 /// </summary>
 
 namespace System.DataAdministration;

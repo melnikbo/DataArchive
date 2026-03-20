@@ -13,6 +13,8 @@ page 633 "Data Archive - New Archive"
 {
     Caption = 'New Data Archive';
     PageType = Card;
+    UsageCategory = Administration;
+    AdditionalSearchTerms = 'archive, logging, record deletions';
 
     layout
     {
@@ -50,6 +52,7 @@ page 633 "Data Archive - New Archive"
                     DataArchive.Create(ArchiveName);
                     DataArchive.StartSubscriptionToDelete(false);
                     IsStarted := true;
+                    CurrPage.Update(false);
                 end;
             }
             action(Stop)

@@ -43,6 +43,9 @@ codeunit 603 "Data Archive Db Subscriber"
                 DataArchiveProvider.SaveRecord(RecRef);
     end;
 
+    /// <summary>
+    /// Binds the provider that will receive archived records on delete.
+    /// </summary>
     procedure SetDataArchiveProvider(var IDataArchiveProvider: Interface "Data Archive Provider")
     begin
         DataArchiveProvider := IDataArchiveProvider;

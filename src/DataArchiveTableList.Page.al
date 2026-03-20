@@ -16,6 +16,7 @@ page 631 "Data Archive Table List"
     PageType = List;
     SourceTable = "Data Archive Table";
     UsageCategory = Administration;
+    AdditionalSearchTerms = 'archive tables, export, backup';
 
     layout
     {
@@ -100,6 +101,18 @@ page 631 "Data Archive Table List"
                     DataArchiveTable.SetRange("Table No.", Rec."Table No.");
                     DataArchiveTable.SetRange("Entry No.", Rec."Entry No.");
                     Codeunit.Run(Codeunit::"Data Archive Export To CSV", DataArchiveTable);
+                end;
+            }
+            action(ShowSummary)
+            {
+                ApplicationArea = All;
+                Caption = 'Show Summary';
+                ToolTip = 'Displays a summary of the selected archived table.';
+                Image = ViewDetails;
+
+                trigger OnAction()
+                begin
+                    Message(Rec.GetTableSummary());
                 end;
             }
         }

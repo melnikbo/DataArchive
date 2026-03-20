@@ -4,7 +4,8 @@
 // ------------------------------------------------------------------------------------------------
 
 /// <summary>
-/// Exports the contents one or more "Data Archive Table" records and pack them into a zip file for download.
+/// Exports the contents of one or more "Data Archive Table" records and packs them into a zip file for download.
+/// Each table is exported as a separate CSV file within the archive.
 /// </summary>
 
 namespace System.DataAdministration;

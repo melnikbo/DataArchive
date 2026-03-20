@@ -95,4 +95,15 @@ table 601 "Data Archive Table"
         RecRef.Open(Rec."Table No.");
         exit(RecRef.ReadPermission());
     end;
+
+    /// <summary>
+    /// Returns a short summary of the archived table for display purposes.
+    /// </summary>
+    procedure GetTableSummary(): Text[100]
+    var
+        SummaryLbl: Label '%1 (%2 records)', Locked = true;
+    begin
+        Rec.CalcFields("Table Name");
+        exit(CopyStr(StrSubstNo(SummaryLbl, Rec."Table Name", Rec."No. of Records"), 1, 100));
+    end;
 }

@@ -5,6 +5,7 @@
 
 /// <summary>
 /// This table contains references to archived media and blob fields.
+/// Used when archiving records that have Media, MediaSet or Blob fields.
 /// </summary>
 
 namespace System.DataAdministration;
@@ -55,7 +56,9 @@ table 602 "Data Archive Media Field"
         }
     }
 
-    //    procedure InsertNewMedia(var DataArchiveTable: Record "Data Archive Table"; var InsStr: InStream)
+    /// <summary>
+    /// Inserts a new media/blob record from the given stream.
+    /// </summary>
     procedure InsertNewMedia(var InsStr: InStream; RecRef: RecordRef; CurrentDataArchiveEntryNo: Integer)
     begin
         Rec.Init();

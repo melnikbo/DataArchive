@@ -26,6 +26,7 @@ codeunit 608 "Data Archive Export To Excel"
         ArchiveEmptyErr: Label 'There are no archived records.';
         GeneratingFileMsg: Label 'Creating file @1@@';
         NotAllTablesExportedMsg: Label 'You do not have the Read permission for some of the selected tables. Only the tables you have the Read permission for have been exported.';
+        ExportStartedLbl: Label 'Excel export started.', Locked = true;
 
     local procedure ExportToExcel(var DataArchiveTable: Record "Data Archive Table")
     var
@@ -42,6 +43,7 @@ codeunit 608 "Data Archive Export To Excel"
         if not DataArchiveTable.FindSet() then
             Error(ArchiveEmptyErr);
 
+        Session.LogMessage('0000FG4', ExportStartedLbl, Verbosity::Normal, DataClassification::SystemMetadata, TelemetryScope::ExtensionPublisher, 'Category', 'Data Archive');
         Window.Open(GeneratingFileMsg);
         T0 := Time;
         TempExcelBuffer.CreateNewBook(DataArchiveTable."Table Name" + '-' + format(DataArchiveTable."Entry No."));

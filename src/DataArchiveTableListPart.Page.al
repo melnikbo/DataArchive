@@ -76,6 +76,21 @@ page 632 "Data Archive Table ListPart"
                     Codeunit.Run(Codeunit::"Data Archive Export To CSV", DataArchiveTable);
                 end;
             }
+            action(ShowTableInfo)
+            {
+                ApplicationArea = All;
+                Caption = 'Table Info';
+                ToolTip = 'Shows information about the selected archived table.';
+                Image = Info;
+
+                trigger OnAction()
+                begin
+                    Message(TableInfoLbl, Rec."Table Name", Rec."No. of Records");
+                end;
+            }
         }
     }
+
+    var
+        TableInfoLbl: Label 'Table: %1 | Records: %2', Locked = true;
 }

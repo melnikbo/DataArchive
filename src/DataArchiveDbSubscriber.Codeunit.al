@@ -4,7 +4,8 @@
 // ------------------------------------------------------------------------------------------------
 
 /// <summary>
-/// This codeunit manually bound to the Global database delete trigger
+/// This codeunit manually bound to the Global database delete trigger.
+/// Captures deleted records when Data Archive logging is active.
 /// </summary>
 
 namespace System.DataAdministration;

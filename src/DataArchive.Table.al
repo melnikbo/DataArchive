@@ -5,7 +5,8 @@
 
 /// <summary>
 /// This table holds the individual archive headers.
-/// Data from each table is stored in "Data Archive Table"
+/// Data from each table is stored in "Data Archive Table".
+/// Each archive has a unique Entry No. and optional description.
 /// </summary>
 
 namespace System.DataAdministration;

@@ -28,7 +28,7 @@ page 632 "Data Archive Table ListPart"
                 field("Table Name"; Rec."Table Name")
                 {
                     ApplicationArea = All;
-                    ToolTip = 'Specifies the name of the table that is stored in this record.';
+                    ToolTip = 'Specifies the name of the archived table.';
                 }
                 field("No. of Records"; Rec."No. of Records")
                 {

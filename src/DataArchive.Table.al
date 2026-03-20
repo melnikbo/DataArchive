@@ -68,6 +68,6 @@ table 600 "Data Archive"
         DataArchiveTable: Record "Data Archive Table";
     begin
         DataArchiveTable.SetRange("Data Archive Entry No.", Rec."Entry No.");
-        DataArchiveTable.DeleteAll();
+        DataArchiveTable.DeleteAll(true);
     end;
 }

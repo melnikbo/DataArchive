@@ -30,7 +30,7 @@ codeunit 609 "Data Archive Export to CSV"
         DownloadLbl: Label 'Download';
         NotAllTablesExportedMsg: Label 'You do not have the Read permission for some of the selected tables. Only the tables you have the Read permission for have been exported.';
         NoFilesAddedMsg: Label 'No files were created.';
-
+        CsvExportStartedLbl: Label 'CSV export started.', Locked = true;
 
     local procedure ExportToCSV(var DataArchiveTable: Record "Data Archive Table")
     var
@@ -53,6 +53,7 @@ codeunit 609 "Data Archive Export to CSV"
         if not DataArchiveTable.FindSet() then
             Error(ArchiveEmptyErr);
 
+        Session.LogMessage('0000FG5', CsvExportStartedLbl, Verbosity::Normal, DataClassification::SystemMetadata, TelemetryScope::ExtensionPublisher, 'Category', 'Data Archive');
         Window.Open(GeneratingFileMsg);
         T0 := Time;
         if StrPos(Format(1.1), ',') > 0 then

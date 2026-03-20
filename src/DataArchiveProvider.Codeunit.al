@@ -89,12 +89,14 @@ codeunit 605 "Data Archive Provider" implements "Data Archive Provider"
         Session.LogMessage('0000FG3', StrSubstNo(DataArchiveTableLbl, DataArchiveTable."No. of Records", DataArchiveTable."Table No."), Verbosity::Normal, DataClassification::SystemMetadata, TelemetryScope::ExtensionPublisher, 'Category', DataArchiveCategoryLbl);
     end;
 
+    /// <summary>
+    /// Discards all cached records without saving to the archive.
+    /// </summary>
     procedure DiscardChanges()
     begin
         Clear(CachedDataTableIndex);
         Clear(CachedDataRecords);
     end;
-
 
     procedure SaveRecord(RecordVar: Variant)
     var
@@ -106,11 +108,17 @@ codeunit 605 "Data Archive Provider" implements "Data Archive Provider"
         SaveRecord(RecRef);
     end;
 
+    /// <summary>
+    /// Saves a single record to the archive buffer.
+    /// </summary>
     procedure SaveRecord(var RecRef: RecordRef)
     begin
         SaveRecordsToBuffer(RecRef, false);
     end;
 
+    /// <summary>
+    /// Saves all records within the current filter to the archive buffer.
+    /// </summary>
     procedure SaveRecords(var RecRef: RecordRef)
     begin
         SaveRecordsToBuffer(RecRef, true);
@@ -153,11 +161,17 @@ codeunit 605 "Data Archive Provider" implements "Data Archive Provider"
             SaveTable(TableIndex, RecRef.Number);
     end;
 
+    /// <summary>
+    /// Starts listening for database delete events. Records will be archived automatically.
+    /// </summary>
     procedure StartSubscriptionToDelete()
     begin
         StartSubscriptionToDelete(true);
     end;
 
+    /// <summary>
+    /// Starts listening for database delete events. Use ResetSession=false to avoid session refresh.
+    /// </summary>
     procedure StartSubscriptionToDelete(ResetSession: Boolean)
     var
         SessionSettings: SessionSettings;
@@ -171,6 +185,9 @@ codeunit 605 "Data Archive Provider" implements "Data Archive Provider"
         DataArchiveDbSubscriberBound := true;
     end;
 
+    /// <summary>
+    /// Stops listening for delete events. Call Save() to persist buffered records.
+    /// </summary>
     procedure StopSubscriptionToDelete()
     begin
         if not DataArchiveDbSubscriberBound then

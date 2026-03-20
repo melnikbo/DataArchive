@@ -30,7 +30,7 @@ page 630 "Data Archive List"
                 {
                     ApplicationArea = All;
                     Editable = false;
-                    ToolTip = 'Specifies the entry number for the data archive.';
+                    ToolTip = 'Specifies the unique entry number for this data archive.';
                 }
                 field(Description; Rec.Description)
                 {

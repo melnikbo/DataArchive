@@ -82,7 +82,7 @@ page 630 "Data Archive List"
             {
                 ApplicationArea = All;
                 Caption = 'Create new archive';
-                ToolTip = 'Opens the Data Archive - New Archive page that allows you to do a recording of all subsequent deletions in this session.';
+                ToolTip = 'Opens the page to start recording deletions. All subsequent deletions in this session will be added to the new archive.';
                 Image = New;
                 Promoted = true;
                 PromotedOnly = true;

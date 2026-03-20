@@ -32,7 +32,7 @@ page 631 "Data Archive Table List"
                 }
                 field("Table No."; Rec."Table No.")
                 {
-                    ToolTip = 'Specifies the table number in the data archive table record.';
+                    ToolTip = 'Specifies the ID of the source table that was archived.';
                     ApplicationArea = All;
                 }
                 field("Table Name"; Rec."Table Name")

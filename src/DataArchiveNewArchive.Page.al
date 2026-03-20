@@ -4,7 +4,8 @@
 // ------------------------------------------------------------------------------------------------
 
 /// <summary>
-/// Used for 'recording' delete operations.
+/// Page for creating a new data archive by recording delete operations.
+/// Start logging, perform deletions elsewhere, then stop to save the archive.
 /// </summary>
 
 namespace System.DataAdministration;
@@ -68,6 +69,7 @@ page 633 "Data Archive - New Archive"
                     IsStarted := false;
                     DataArchive.StopSubscriptionToDelete();
                     DataArchive.Save();
+                    CurrPage.Update(false);
                 end;
             }
 

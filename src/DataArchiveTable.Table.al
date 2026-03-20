@@ -5,6 +5,7 @@
 
 /// <summary>
 /// This table contains archived data from the specified table.
+/// Each record stores schema (Table Fields json) and data (Table Data json) for one archived table.
 /// </summary>
 
 namespace System.DataAdministration;
@@ -85,6 +86,9 @@ table 601 "Data Archive Table"
         }
     }
 
+    /// <summary>
+    /// Checks whether the current user has read permission on the source table.
+    /// </summary>
     procedure HasReadPermission(): Boolean
     var
         TableMetadata: Record "Table Metadata";

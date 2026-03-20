@@ -57,6 +57,9 @@ codeunit 605 "Data Archive Provider" implements "Data Archive Provider"
         CurrentDataArchiveEntryNo := ID;
     end;
 
+    /// <summary>
+    /// Persists all buffered records to the archive tables.
+    /// </summary>
     procedure Save()
     var
         TableNo: Integer;
@@ -196,11 +199,17 @@ codeunit 605 "Data Archive Provider" implements "Data Archive Provider"
         DataArchiveDbSubscriberBound := false;
     end;
 
+    /// <summary>
+    /// Sets the provider reference used for self-binding in event subscribers.
+    /// </summary>
     procedure SetDataArchiveProvider(var NewDataArchiveProvider: Interface "Data Archive Provider")
     begin
         DataArchiveProvider := NewDataArchiveProvider;
     end;
 
+    /// <summary>
+    /// Returns true if this implementation is available for binding.
+    /// </summary>
     procedure DataArchiveProviderExists(): Boolean
     begin
         exit(true);
